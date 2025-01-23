@@ -41,12 +41,12 @@ class _UiSettings(BaseSettings):
         env_ignore_empty=True
     )
 
-    title: str = "Contoso"
-    logo: Optional[str] = None
+    title: str = "Ministry of Higher Education - وزارة التعليم العالي"
+    logo: Optional[str] = "https://www.mohe.edu.kw/site/assets/images/Uploads/202112911224.png"
     chat_logo: Optional[str] = None
-    chat_title: str = "MOHE"
-    chat_description: str = "This chatbot is configured to answer your questions"
-    favicon: str = "/favicon.ico"
+    chat_title: str = "Ministry of Higher Education - وزارة التعليم العالي"
+    chat_description: str = "هذا الشات بوت مخصص لخدمات معادلة الشهادات"
+    favicon: str = "https://www.mohe.edu.kw/site/assets/images/Uploads/2024101494550.png"
     show_share_button: bool = True
     show_chat_history_button: bool = True
 

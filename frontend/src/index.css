@@ -1,19 +1,15 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  background: #f2f2f2;
+  background: #f2f2f2; /* Subtle background for contrast */
   font-family:
-    'Segoe UI',
-    'Segoe UI Web (West European)',
     'Segoe UI',
     -apple-system,
     BlinkMacSystemFont,
@@ -26,4 +22,125 @@ html {
 
 #root {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chat Container */
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: #4d88b4;
+  color: #ffffff;
+  padding: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Chat Messages */
+.messages {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+
+.message {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #4d88b4;
+  color: #ffffff;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #e6f3fc;
+  color: #333333;
+}
+
+/* Input Section */
+.input-container {
+  padding: 12px;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #4d88b4;
+}
+
+.input-container .send-button {
+  background: #4d88b4;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-container .send-button:hover {
+  background: #3b6d8e;
+  transform: scale(1.1);
+}
+
+.input-container .attach-button {
+  background: #4d88b4;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-container .attach-button:hover {
+  background: #3b6d8e;
+  transform: scale(1.1);
+}
+
+.input-container .hidden-input {
+  display: none;
 }
